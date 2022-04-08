@@ -1,7 +1,7 @@
 @Andre
 Feature: Reqresin
 
-  @GET
+  @GET @user @positif
   Scenario: Success GET Users
     When user send GET Users request to reqresin
     Then response status code should be 200
@@ -19,7 +19,7 @@ Feature: Reqresin
     Then response status code should be 400
     And response structure should match json schema "login-failed.json"
 
-  @PUT
+  @PUT @update @positif
   Scenario: Success PUT update
     When  user send PUT Update request to reqresin
     Then response status code should be 200
@@ -30,19 +30,19 @@ Feature: Reqresin
     When  user send DELETE request to reqresin
     Then response status code should be 204
 
-  @POST
+  @POST @Register @negatif
   Scenario: Unsuccess POST Register
     When  user send POST unsuccess register request to reqresin
     Then response status code should be 400
     And response structure should match json schema "unsuccess-register.json"
 
-  @POST
+  @POST @Register @positif
   Scenario: Success POST Register
     When  user send POST success register request to reqresin
     Then response status code should be 200
     And response structure should match json schema "success-register.json"
 
-  @POST
+  @POST @Create @positif
   Scenario: Success POST Create
     When  user send POST create request to reqresin
     Then response status code should be 201
