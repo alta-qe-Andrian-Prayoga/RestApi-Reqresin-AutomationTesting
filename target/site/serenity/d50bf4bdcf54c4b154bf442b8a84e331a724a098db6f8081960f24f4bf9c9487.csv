@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Reqresin","Success POST login","SUCCESS","2022-04-08T15:28:29.68+07:00[Asia/Bangkok]","0.0","0.63"
+"Reqresin","Failed POST login","SUCCESS","2022-04-08T15:28:30.321+07:00[Asia/Bangkok]","0.0","0.58"
+"Reqresin","Unsuccess POST Register","SUCCESS","2022-04-08T15:28:32.129+07:00[Asia/Bangkok]","0.0","0.61"
+"Reqresin","Success POST Register","SUCCESS","2022-04-08T15:28:32.736+07:00[Asia/Bangkok]","0.0","0.58"
+"Reqresin","Success POST Create","SUCCESS","2022-04-08T15:28:33.314+07:00[Asia/Bangkok]","0.0","0.61"

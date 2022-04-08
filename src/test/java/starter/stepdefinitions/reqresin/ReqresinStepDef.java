@@ -69,8 +69,8 @@ public class ReqresinStepDef {
         restAssuredThat(response -> response.assertThat().body(matchesJsonSchemaInClasspath(path)));
     }
 
-    @When("user send POST login request to reqresin with body json {string}")
-    public void userSendPOSTLoginRequestToReqresinWithBodyJson(String Jsonpath) {
-        reqresin.postloginWithParam(Jsonpath);
+    @When("user send POST login request to reqresin with email {string} and with password {string}")
+    public void userSendPOSTLoginRequestToReqresinWithBodyJson(String email, String password) {
+        reqresin.postloginWithParam(email, password);
     }
 }

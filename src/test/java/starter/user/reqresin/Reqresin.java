@@ -22,9 +22,12 @@ public class Reqresin {
         SerenityRest.given().header("Content-type", "application/json").body(bodyJson.toString()).post(REQRESIN_BASEURL + "/api/login");
     }
 
-    public  void  postloginWithParam(String Jsonpath){
+    public  void  postloginWithParam(String email, String password){
 
-        File bodyJson = new File(String.format("src/test/resources/payload/%s", Jsonpath));
+        JSONObject bodyJson = new JSONObject();
+
+        bodyJson.put("email", email);
+        bodyJson.put("password", password);
 
         SerenityRest.given().header("Content-type", "application/json").body(bodyJson.toString()).post(REQRESIN_BASEURL + "/api/login");
     }

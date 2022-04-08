@@ -7,18 +7,17 @@ Feature: Reqresin
     Then response status code should be 200
     And response structure should match json schema "users.json"
 
-  @POST
+  @POST @login @positif
   Scenario: Success POST login
-    When user send POST login request to reqresin with body json "succes-login"
-
+    When user send POST login request to reqresin with email "eve.holt@reqres.in" and with password "cityslicka"
     Then response status code should be 200
     And response structure should match json schema "login.json"
 
+  @POST @login @negatif
   Scenario: Failed POST login
-    When user send POST login request to reqresin with body json "failed-login.json"
-
+    When user send POST login request to reqresin with email "peter@klaven" and with password ""
     Then response status code should be 400
-
+    And response structure should match json schema "login-failed.json"
 
   @PUT
   Scenario: Success PUT update
