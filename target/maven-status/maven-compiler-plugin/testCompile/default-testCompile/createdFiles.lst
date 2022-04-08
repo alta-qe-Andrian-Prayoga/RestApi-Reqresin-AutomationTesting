@@ -1,0 +1,7 @@
+starter\user\Get.class
+starter\user\reqresin\Reqresin.class
+starter\user\Post.class
+starter\CucumberTestSuite.class
+starter\stepdefinitions\UserSteps.class
+starter\user\reqresin\CucumberHooks.class
+starter\stepdefinitions\reqresin\ReqresinStepDef.class
